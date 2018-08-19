@@ -66,7 +66,7 @@ enum hb_ot_layout_glyph_props_flags_t
 					  HB_OT_LAYOUT_GLYPH_PROPS_LIGATED |
 					  HB_OT_LAYOUT_GLYPH_PROPS_MULTIPLIED
 };
-HB_MARK_AS_FLAG_T (hb_ot_layout_glyph_props_flags_t);
+HB_MARK_AS_FLAG_T (hb_ot_layout_glyph_props_flags_t)
 
 
 /*
@@ -265,7 +265,7 @@ enum hb_unicode_props_flags_t {
   UPROPS_MASK_Cf_ZWJ	= 0x0100u,
   UPROPS_MASK_Cf_ZWNJ	= 0x0200u
 };
-HB_MARK_AS_FLAG_T (hb_unicode_props_flags_t);
+HB_MARK_AS_FLAG_T (hb_unicode_props_flags_t)
 
 static inline void
 _hb_glyph_info_set_unicode_props (hb_glyph_info_t *info, hb_buffer_t *buffer)

@@ -580,7 +580,7 @@ struct LookupFlag : HBUINT16
 
 } /* namespace OT */
 /* This has to be outside the namespace. */
-HB_MARK_AS_FLAG_T (OT::LookupFlag::Flags);
+HB_MARK_AS_FLAG_T (OT::LookupFlag::Flags)
 namespace OT {
 
 struct Lookup
