@@ -108,7 +108,7 @@ extern "C" void  hb_free_impl(void *ptr);
 #if __GNUC__ >= 3
 #define HB_PURE_FUNC	__attribute__((pure))
 #define HB_CONST_FUNC	__attribute__((const))
-#define HB_PRINTF_FUNC(format_idx, arg_idx) __attribute__((__format__ (__printf__, format_idx, arg_idx)))
+#define HB_PRINTF_FUNC(format_idx, arg_idx)
 #else
 #define HB_PURE_FUNC
 #define HB_CONST_FUNC
