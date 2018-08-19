@@ -48,7 +48,7 @@ _calculate_glyf_and_loca_prime_size (const OT::glyf::accelerator_t &glyf,
     *instruction_start = 0;
     *instruction_end = 0;
 
-    unsigned int start_offset, end_offset;
+    unsigned int start_offset = 0, end_offset = 0;
     if (unlikely (!(glyf.get_offsets(next_glyph, &start_offset, &end_offset)
                     && glyf.remove_padding(start_offset, &end_offset))))
     {
@@ -167,7 +167,7 @@ _write_glyf_and_loca_prime (hb_subset_plan_t              *plan,
   bool success = true;
   for (unsigned int i = 0; i < glyph_ids.len; i++)
   {
-    unsigned int start_offset, end_offset;
+    unsigned int start_offset = 0, end_offset = 0;
     if (unlikely (!(glyf.get_offsets (glyph_ids[i], &start_offset, &end_offset)
                     && glyf.remove_padding(start_offset, &end_offset))))
       end_offset = start_offset = 0;
