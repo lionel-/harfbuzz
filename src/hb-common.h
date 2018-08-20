@@ -325,7 +325,8 @@ typedef enum
    *
    *   http://lists.freedesktop.org/archives/harfbuzz/2014-March/004150.html
    */
-  _HB_SCRIPT_MAX_VALUE				= HB_TAG_MAX, /*< skip >*/
+  _HB_SCRIPT_MAX_VALUE                          = 0x7FFFFFF,
+  _HB_SCRIPT_NEG                                = -1,
   _HB_SCRIPT_MAX_VALUE_SIGNED			= HB_TAG_MAX_SIGNED /*< skip >*/
 
 } hb_script_t;
