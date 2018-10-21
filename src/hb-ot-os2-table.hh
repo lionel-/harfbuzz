@@ -75,10 +75,10 @@ struct os2
   }
 
   inline void _update_unicode_ranges (const hb_prealloced_array_t<hb_codepoint_t> &codepoints,
-                                      HBUINT32 ulUnicodeRange[4]) const
+                                      HBUINT32 ulUnicodeRange_[4]) const
   {
     for (unsigned int i = 0; i < 4; i++)
-      ulUnicodeRange[i].set (0);
+      ulUnicodeRange_[i].set (0);
 
     for (unsigned int i = 0; i < codepoints.len; i++)
     {
@@ -89,14 +89,14 @@ struct os2
         unsigned int block = bit / 32;
         unsigned int bit_in_block = bit % 32;
         unsigned int mask = 1 << bit_in_block;
-        ulUnicodeRange[block].set (ulUnicodeRange[block] | mask);
+        ulUnicodeRange_[block].set (ulUnicodeRange_[block] | mask);
       }
       if (cp >= 0x10000 && cp <= 0x110000)
       {
         /* the spec says that bit 57 ("Non Plane 0") implies that there's
            at least one codepoint beyond the BMP; so I also include all
            the non-BMP codepoints here */
-        ulUnicodeRange[1].set (ulUnicodeRange[1] | (1 << 25));
+        ulUnicodeRange_[1].set (ulUnicodeRange_[1] | (1 << 25));
       }
     }
   }

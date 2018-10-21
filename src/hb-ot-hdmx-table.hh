@@ -45,11 +45,11 @@ struct DeviceRecord
     const DeviceRecord *source_device_record;
     hb_subset_plan_t *subset_plan;
 
-    inline void init(const DeviceRecord *source_device_record,
-		     hb_subset_plan_t   *subset_plan)
+    inline void init(const DeviceRecord *source_device_record_,
+		     hb_subset_plan_t   *subset_plan_)
     {
-      this->source_device_record = source_device_record;
-      this->subset_plan = subset_plan;
+      this->source_device_record = source_device_record_;
+      this->subset_plan = subset_plan_;
     }
 
     inline unsigned int len () const
