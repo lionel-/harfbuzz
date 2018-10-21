@@ -31,14 +31,7 @@ HBSOURCES =  $(HB_BASE_sources)
 HBSOURCES += $(HB_BASE_RAGEL_GENERATED_sources)
 HBHEADERS = $(HB_BASE_headers)
 
-if WITH_LIBSTDCXX
 HBNOLIBCXXCFLAGS =
-else
-# Make sure we don't link to libstdc++
-# No threadsafe statics in C++ as we do it ourselves
-HBCFLAGS += -fno-exceptions
-HBNOLIBCXXFLAGS = -fno-threadsafe-statics -fno-rtti
-endif
 
 if HAVE_OT
 HBSOURCES += $(HB_OT_sources)
