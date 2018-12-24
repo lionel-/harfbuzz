@@ -19519,9 +19519,6 @@ if test "x$GCC" = "xyes"; then
 	# Make symbols link locally
 	LDFLAGS="$LDFLAGS -Bsymbolic-functions"
 
-	# Assorted warnings
-	CXXFLAGS="$CXXFLAGS -Wcast-align"
-
 	case "$host" in
 		*-*-mingw*)
 		;;
