@@ -21246,7 +21246,7 @@ else
   with_freetype=auto
 fi
 
-have_freetype=false
+have_freetype=true
 FREETYPE_DEPS="freetype2 >= 12.0.6"
 
 if test "x$with_freetype" = "xyes" -o "x$with_freetype" = "xauto"; then
