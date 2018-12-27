@@ -878,6 +878,7 @@ struct ArrayOf
     return array + start_offset;
   }
 
+  HB_NO_SANITIZE_BOUNDS
   inline const Type& operator [] (unsigned int i) const
   {
     if (unlikely (i >= len)) return Null(Type);

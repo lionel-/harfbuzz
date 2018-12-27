@@ -1070,4 +1070,11 @@ struct hb_string_t
 };
 
 
+#if defined(__clang__) || defined(__GNUC__)
+#define HB_NO_SANITIZE_BOUNDS __attribute__((no_sanitize("address")))
+#else
+ #define HB_NO_SANITIZE_BOUNDS
+#endif
+
+
 #endif /* HB_PRIVATE_HH */
